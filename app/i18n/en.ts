@@ -9,6 +9,8 @@ const en = {
       "psst  — This probably isn't what your app looks like. (Unless your designer handed you these screens, and in that case, ship it!)",
     readyForLaunch: "Your app, almost ready for launch!",
     exciting: "(ohh, this is exciting!)",
+    aboutMonumen:
+      "Monumen Tanjung Puri merupakan sebuah tugu kebanggan masyarakat Tabalong. Tugu ini terletak di Mabuun Kecamatan Murung Pudak Kabupaten Tabalong. Tugu ini merupakan tempat yang sangat strategis, karena terletak di Persimpangan 3 Provinsi Kalimantan Selatan, Kalimantan Tengah dan Kalimantan Timur",
   },
   errorScreen: {
     title: "Something went wrong!",

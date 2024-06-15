@@ -1,6 +1,6 @@
 {
   "name": "MonumenTanjungPuri",
-  "displayName": "MonumenTanjungPuri",
+  "displayName": "Monumen Tanjung Puri",
   "expo": {
     "name": "MonumenTanjungPuri",
     "slug": "MonumenTanjungPuri",
@@ -17,9 +17,7 @@
       "fallbackToCacheTimeout": 0
     },
     "jsEngine": "hermes",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "android": {
       "icon": "./assets/images/app-icon-android-legacy.png",
       "package": "com.mwitech.sarabakawadesign.tanjungpuri",
