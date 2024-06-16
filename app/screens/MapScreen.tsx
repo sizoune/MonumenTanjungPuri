@@ -4,6 +4,7 @@ import { ViewStyle } from "react-native"
 import { AppStackScreenProps } from "app/navigators"
 import { Screen } from "app/components"
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps"
+import { StatusBar } from "expo-status-bar"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
 
@@ -17,6 +18,7 @@ export const MapScreen: FC<MapScreenProps> = observer(function MapScreen() {
   // const navigation = useNavigation()
   return (
     <Screen contentContainerStyle={$root}>
+      <StatusBar style="auto" />
       <MapView
         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
         style={$mapStyle}

@@ -5,6 +5,7 @@ import { AppStackScreenProps } from "app/navigators"
 import { Screen, Text } from "app/components"
 import ImageView from "react-native-image-viewing"
 import { spacing } from "app/theme"
+import { StatusBar } from "expo-status-bar"
 
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
@@ -29,6 +30,7 @@ export const AboutScreen: FC<AboutScreenProps> = observer(function AboutScreen()
   // const navigation = useNavigation()
   return (
     <Screen contentContainerStyle={$root}>
+      <StatusBar style="auto" />
       <TouchableOpacity onPress={() => setIsVisible(true)}>
         <View style={$imageContainer}>
           <Image source={{ uri: hakiUri }} alt="alt" style={$imageStyle} />

@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite"
 import { Dimensions, ViewStyle } from "react-native"
 import { AppStackScreenProps } from "app/navigators"
 import { Screen } from "app/components"
+import { StatusBar } from "expo-status-bar"
 import Pdf from "react-native-pdf"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
@@ -19,6 +20,7 @@ export const EbookScreen: FC<EbookScreenProps> = observer(function EbookScreen()
   // const navigation = useNavigation()
   return (
     <Screen contentContainerStyle={$root} preset="scroll">
+      <StatusBar style="auto" />
       <Pdf
         source={ebookPdf}
         trustAllCerts={false}

@@ -4,6 +4,7 @@ import { ViewStyle } from "react-native"
 import { AppStackScreenProps } from "app/navigators"
 import { Screen } from "app/components"
 import YoutubePlayer from "react-native-youtube-iframe"
+import { StatusBar } from "expo-status-bar"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
 
@@ -17,6 +18,7 @@ export const VideoScreen: FC<VideoScreenProps> = observer(function VideoScreen()
   // const navigation = useNavigation()
   return (
     <Screen contentContainerStyle={$root} preset="scroll">
+      <StatusBar style="auto" />
       <YoutubePlayer
         height={300}
         play={true}
