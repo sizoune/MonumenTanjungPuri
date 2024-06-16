@@ -3,7 +3,7 @@
   "displayName": "Monumen Tanjung Puri",
   "expo": {
     "name": "Monumen Tanjung Puri",
-    "slug": "Monumen-Tanjung-Puri",
+    "slug": "MonumenTanjungPuri",
     "scheme": "monumentanjungpuri",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,9 +17,7 @@
       "fallbackToCacheTimeout": 0
     },
     "jsEngine": "hermes",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "android": {
       "icon": "./assets/images/app-icon-android-legacy.png",
       "package": "com.mwitech.sarabakawadesign.tanjungpuri",
@@ -31,6 +29,11 @@
         "image": "./assets/images/splash-logo-android-universal.png",
         "resizeMode": "contain",
         "backgroundColor": "#000000"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": ""
+        }
       }
     },
     "ios": {
@@ -66,7 +69,9 @@
           }
         }
       ],
-      "expo-font"
+      "expo-font",
+      "@config-plugins/react-native-blob-util",
+      "@config-plugins/react-native-pdf"
     ],
     "experiments": {
       "tsconfigPaths": true

@@ -1243,6 +1243,16 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@config-plugins/react-native-blob-util@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@config-plugins/react-native-blob-util/-/react-native-blob-util-8.0.0.tgz#56ac0e9788754185144982ab780f8d40f422b129"
+  integrity sha512-+6xiWfOU2q7aMkl4L7eLnsMB7DgcibZrs4Y6EjAkf5q5WIKL58aNBWvHlmaC7ejuWYud9q9MTjRGM3r8PDz4Pw==
+
+"@config-plugins/react-native-pdf@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@config-plugins/react-native-pdf/-/react-native-pdf-8.0.0.tgz#a39c0fd8e9c5909243ee3a2e272a65308a47f891"
+  integrity sha512-mYJSdg9TwuZo5in4l2eLWglsciS7RLzxaKrL6ja+Fs8znurtourKg3cpwSGLaPDmGePjrMvLgHQI3Ml2PfMEpg==
+
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz#00629c35a688e05a88b1cda684fb9d5e73f000a1"
@@ -4389,7 +4399,7 @@ dotenv-expand@~11.0.6:
   dependencies:
     dotenv "^16.4.4"
 
-dotenv@^16.4.4, dotenv@~16.4.5:
+dotenv@^16.4.4, dotenv@^16.4.5, dotenv@~16.4.5:
   version "16.4.5"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
   integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==

@@ -70,6 +70,7 @@ buck-out/
 .expo/*
 bin/Exponent.app
 /android
+android
 /ios
 
 ## Secrets
@@ -84,5 +85,5 @@ web-build/
 
 # Configurations
 !env.js
-
+.env
 /coverage
