@@ -5,8 +5,7 @@ import { AppStackScreenProps } from "app/navigators"
 import { $container, $topContainer, $welcomeLogo } from "./WelcomeScreen"
 import { useSafeAreaInsetsStyle } from "app/utils/useSafeAreaInsetsStyle"
 import { colors, spacing } from "app/theme"
-import { Card, Text, Icon } from "app/components"
-import { BookOpenText } from "lucide-react-native"
+import { Text } from "app/components"
 import { MenuItem } from "app/components/MenuItem"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
@@ -15,7 +14,9 @@ const monumen2 = require("../../assets/images/tanjungpuri2.jpg")
 
 interface MenuScreenProps extends AppStackScreenProps<"Menu"> {}
 
-export const MenuScreen: FC<MenuScreenProps> = observer(function MenuScreen() {
+export const MenuScreen: FC<MenuScreenProps> = observer(function MenuScreen(_props) {
+  const { navigation } = _props
+
   const $bottomContainerInsets = useSafeAreaInsetsStyle(["bottom"])
   const currentYear = new Date().getFullYear()
   return (
@@ -25,10 +26,30 @@ export const MenuScreen: FC<MenuScreenProps> = observer(function MenuScreen() {
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>
-        <MenuItem menuName="E-Book" onMenuClick={() => {}} />
-        <MenuItem menuName="Video" onMenuClick={() => {}} />
-        <MenuItem menuName="Peta Lokasi" onMenuClick={() => {}} />
-        <MenuItem menuName="Tentang Aplikasi" onMenuClick={() => {}} />
+        <MenuItem
+          menuName="E-Book"
+          onMenuClick={() => {
+            navigation.navigate("Ebook")
+          }}
+        />
+        <MenuItem
+          menuName="Video"
+          onMenuClick={() => {
+            navigation.navigate("Video")
+          }}
+        />
+        <MenuItem
+          menuName="Peta Lokasi"
+          onMenuClick={() => {
+            navigation.navigate("Map")
+          }}
+        />
+        <MenuItem
+          menuName="Tentang Kami"
+          onMenuClick={() => {
+            navigation.navigate("About")
+          }}
+        />
         <Text
           text={`Copyright © Sarabakawa Design ${currentYear}`}
           style={$copyrightStyle}

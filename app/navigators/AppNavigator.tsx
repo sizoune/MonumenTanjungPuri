@@ -31,6 +31,10 @@ export type AppStackParamList = {
   Welcome: undefined
   // 🔥 Your screens go here
   Menu: undefined
+  Ebook: undefined
+  Video: undefined
+  Map: undefined
+  About: undefined
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
 
@@ -54,6 +58,26 @@ const AppStack = observer(function AppStack() {
       <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
       {/** 🔥 Your screens go here */}
       <Stack.Screen name="Menu" component={Screens.MenuScreen} />
+      <Stack.Screen
+        name="Ebook"
+        component={Screens.EbookScreen}
+        options={{ headerShown: true, title: "E-Book" }}
+      />
+      <Stack.Screen
+        name="Video"
+        component={Screens.VideoScreen}
+        options={{ headerShown: true, title: "Video" }}
+      />
+      <Stack.Screen
+        name="Map"
+        component={Screens.MapScreen}
+        options={{ headerShown: true, title: "Map" }}
+      />
+      <Stack.Screen
+        name="About"
+        component={Screens.AboutScreen}
+        options={{ headerShown: true, title: "Tentang Kami" }}
+      />
       {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
     </Stack.Navigator>
   )
