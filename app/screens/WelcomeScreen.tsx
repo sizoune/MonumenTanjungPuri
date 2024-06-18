@@ -1,10 +1,11 @@
 import { observer } from "mobx-react-lite"
 import React, { FC } from "react"
 import { Image, ImageStyle, TextStyle, View, ViewStyle } from "react-native"
-import { Button, Icon, Text } from "app/components"
+import { Button, Icon, Text, Screen } from "app/components"
 import { AppStackScreenProps } from "../navigators"
 import { colors, spacing } from "../theme"
 import { useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
+import { StatusBar } from "expo-status-bar"
 
 export const monumen = require("../../assets/images/tanjungpuri.jpg")
 
@@ -15,7 +16,8 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
   const $bottomContainerInsets = useSafeAreaInsetsStyle(["bottom"])
 
   return (
-    <View style={$container}>
+    <Screen contentContainerStyle={$container} preset="scroll">
+      <StatusBar style="light" />
       <View style={$topContainer}>
         <Image style={$welcomeLogo} source={monumen} resizeMode="cover" />
       </View>
@@ -23,7 +25,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
       <View style={[$bottomContainer, $bottomContainerInsets]}>
         <View>
           <Text text="MONUMEN TANJUNG PURI" size="xl" weight="bold" />
-          <Text tx="welcomeScreen.aboutMonumen" size="md" style={$monumenAboutStyle} />
+          <Text tx="welcomeScreen.aboutMonumen" size="xs" style={$monumenAboutStyle} />
         </View>
         <Button
           text="Lanjut"
@@ -32,7 +34,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           onPress={() => navigation.navigate("Menu")}
         />
       </View>
-    </View>
+    </Screen>
   )
 })
 

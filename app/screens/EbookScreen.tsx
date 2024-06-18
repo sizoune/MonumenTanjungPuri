@@ -8,7 +8,10 @@ import Pdf from "react-native-pdf"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
 
-const ebookPdf = require("../../assets/documents/ebook.pdf")
+const ebookPdf = {
+  uri: "https://drive.google.com/uc?export=download&id=1l5MNHLOF2e0sOcJRLpx3rP6nF_-vlHde",
+  cache: true,
+}
 
 interface EbookScreenProps extends AppStackScreenProps<"Ebook"> {}
 
@@ -18,6 +21,7 @@ export const EbookScreen: FC<EbookScreenProps> = observer(function EbookScreen()
 
   // Pull in navigation via hook
   // const navigation = useNavigation()
+
   return (
     <Screen contentContainerStyle={$root} preset="scroll">
       <StatusBar style="auto" />

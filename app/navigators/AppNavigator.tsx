@@ -76,7 +76,7 @@ const AppStack = observer(function AppStack() {
       <Stack.Screen
         name="About"
         component={Screens.AboutScreen}
-        options={{ headerShown: true, title: "Tentang Kami" }}
+        options={{ headerShown: true, title: "Lisensi" }}
       />
       {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
     </Stack.Navigator>

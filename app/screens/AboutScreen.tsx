@@ -11,6 +11,7 @@ import { StatusBar } from "expo-status-bar"
 // import { useStores } from "app/models"
 
 const hakiUri = Image.resolveAssetSource(require("../../assets/images/haki.jpg")).uri
+const aboutUri = Image.resolveAssetSource(require("../../assets/images/about.png")).uri
 
 const images = [
   {
@@ -33,6 +34,7 @@ export const AboutScreen: FC<AboutScreenProps> = observer(function AboutScreen()
       <StatusBar style="auto" />
       <TouchableOpacity onPress={() => setIsVisible(true)}>
         <View style={$imageContainer}>
+          <Image source={{ uri: aboutUri }} alt="alt" style={$topImageStyle} />
           <Image source={{ uri: hakiUri }} alt="alt" style={$imageStyle} />
           <Text text="Tekan Gambar Untuk Melihat Lebih Jelas" style={$copyrightStyle} />
         </View>
@@ -59,13 +61,22 @@ const $root: ViewStyle = {
 }
 
 const $imageContainer: ViewStyle = {
+  display: "flex",
+  gap: 2,
   width: "100%",
-  height: 400,
 }
 
 const $imageStyle: ImageStyle = {
   width: "100%",
   height: 500,
+  resizeMode: "contain",
+  marginTop: spacing.sm,
+  zIndex: 20,
+}
+
+const $topImageStyle: ImageStyle = {
+  width: "100%",
+  height: 80,
   resizeMode: "contain",
   marginTop: spacing.lg,
   zIndex: 20,

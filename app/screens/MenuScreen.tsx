@@ -5,8 +5,9 @@ import { AppStackScreenProps } from "app/navigators"
 import { $container, $topContainer, $welcomeLogo } from "./WelcomeScreen"
 import { useSafeAreaInsetsStyle } from "app/utils/useSafeAreaInsetsStyle"
 import { colors, spacing } from "app/theme"
-import { Text } from "app/components"
+import { Text, Screen } from "app/components"
 import { MenuItem } from "app/components/MenuItem"
+import { StatusBar } from "expo-status-bar"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "app/models"
 
@@ -20,7 +21,8 @@ export const MenuScreen: FC<MenuScreenProps> = observer(function MenuScreen(_pro
   const $bottomContainerInsets = useSafeAreaInsetsStyle(["bottom"])
   const currentYear = new Date().getFullYear()
   return (
-    <View style={$container}>
+    <Screen contentContainerStyle={$container} preset="scroll">
+      <StatusBar style="light" />
       <View style={$topContainer}>
         <Image style={$welcomeLogo} source={monumen2} resizeMode="cover" />
       </View>
@@ -45,7 +47,7 @@ export const MenuScreen: FC<MenuScreenProps> = observer(function MenuScreen(_pro
           }}
         />
         <MenuItem
-          menuName="Tentang Kami"
+          menuName="Lisensi"
           onMenuClick={() => {
             navigation.navigate("About")
           }}
@@ -56,7 +58,7 @@ export const MenuScreen: FC<MenuScreenProps> = observer(function MenuScreen(_pro
           size="xs"
         />
       </View>
-    </View>
+    </Screen>
   )
 })
 
